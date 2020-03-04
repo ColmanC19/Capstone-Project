@@ -1,3 +1,4 @@
+import 'bootstrap/dist/css/bootstrap.css';
 import React from 'react';
 import './App.css';
 import Header from './components/Header.jsx';
@@ -12,7 +13,7 @@ function App() {
     < Header />
     <Switch>
     <Route path='/homeBody' component={HomeBody} />
-    <Route path='/' component={HomeBody} />
+    <Route exact path='/' component={HomeBody} />
     <Route path='/restaurantguide' component={RestaurantGuide} />
     </Switch>
     </div>
