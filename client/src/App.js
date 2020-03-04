@@ -12,7 +12,7 @@ function App() {
     <Switch>
     <Route path='/homeBody' component={HomeBody} />
     <Route path='/' component={HomeBody} />
-    <Route path='/RestaurantGuide' component={RestaurantGuide} />
+    <Route path='/restaurantguide' component={RestaurantGuide} />
     </Switch>
     <h1>FeedR Pdx</h1>
 

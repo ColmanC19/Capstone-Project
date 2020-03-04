@@ -9,7 +9,7 @@ function Header(){
  return (
 
    <div>
-    <Link to="/homebody"> Home </Link><Link to="/"> Back </Link><Link to="/restaurantGuide"> Restaurant Guide </Link>
+    <Link to="/homebody"> Home </Link><Link to="/"> Back </Link><Link to="/restaurantguide"> Restaurant Guide </Link>
 
 
    </div>
