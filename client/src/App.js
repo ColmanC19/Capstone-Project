@@ -7,6 +7,7 @@ import { Switch, Route } from 'react-router-dom';
 
 function App() {
   return (
+    <div>
     <div className="App">
     < Header />
     <Switch>
@@ -14,6 +15,7 @@ function App() {
     <Route path='/' component={HomeBody} />
     <Route path='/restaurantguide' component={RestaurantGuide} />
     </Switch>
+    </div>
     </div>
   );
 }
