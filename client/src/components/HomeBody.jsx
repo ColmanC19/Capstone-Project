@@ -1,8 +1,15 @@
 import React from 'react';
 
 function HomeBody(){
+  const homebodyCSS = {
+
+  }
   return(
-    <h1>Welcome</h1>
+    <div style={homebodyCSS}>
+
+
+
+    </div>
   )
 }
 

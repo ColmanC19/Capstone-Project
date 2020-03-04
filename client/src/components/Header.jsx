@@ -12,7 +12,7 @@ const headerCSS = {
  return (
 
    <div>
-    <Link to="/homebody"> Home| </Link><Link to="/"> Back| </Link><Link to="/restaurantguide"> Restaurant Guide| </Link>
+    <Link to="/homebody"> Home| </Link><Link to="/"> Back| </Link><Link to="/restaurantguide"> Restaurant Guide </Link>
     <h1 style={headerCSS}>FeedR Pdx</h1>
 
 
