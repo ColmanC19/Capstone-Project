@@ -2,7 +2,7 @@ import React from 'react';
 
 function RestaurantGuide(){
   const guideCSS = {
-    display: "block",
+    display: "inline-flex",
     border: "solid black",
     marginLeft: "auto",
     marginRight: "auto",
