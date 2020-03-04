@@ -14,8 +14,6 @@ function App() {
     <Route path='/' component={HomeBody} />
     <Route path='/restaurantguide' component={RestaurantGuide} />
     </Switch>
-    <h1>FeedR Pdx</h1>
-
     </div>
   );
 }
