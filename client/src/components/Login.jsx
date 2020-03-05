@@ -18,7 +18,8 @@ export default function Login(props) {
     marginLeft: "auto",
     border: "solid",
     borderRadius: "10px",
-    boxShadow: "5px 10px #888888"
+    boxShadow: "5px 10px #888888",
+
 
 
 
