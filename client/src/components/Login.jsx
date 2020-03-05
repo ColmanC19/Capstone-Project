@@ -15,32 +15,35 @@ export default function Login(props) {
   }
   const signInCSS = {
     maxWidth: "120px",
-    padding: "0px 0",
-    margin: "0 auto",
+    marginLeft: "auto",
+    border: "solid",
+    borderRadius: "10px"
 
+  }
+  const btnStyle = {
+    border: "solid",
+    borderRadius: "10px"
   }
 
   return (
-    <div style={signInCSS}>
-      <form onSubmit={handleSubmit}>
+    <div>
+      <form style={signInCSS} onSubmit={handleSubmit}>
         <FormGroup controlId="email">
           <ControlLabel>Email</ControlLabel>
-          <FormControl
+          <FormControl style={signInCSS}
             autoFocus
             type="email"
             value={email}
             onChange={e => setEmail(e.target.value)}
           />
-        </FormGroup>
-        <FormGroup controlId="password">
           <ControlLabel>Password</ControlLabel>
-          <FormControl
+          <FormControl style={signInCSS}
             value={password}
             onChange={e => setPassword(e.target.value)}
             type="password"
           />
-        </FormGroup>
-        <Button disabled={!validateForm()} type="submit">
+          </FormGroup>
+        <Button style={btnStyle} disabled={!validateForm()} type="submit">
           Login
         </Button>
       </form>
