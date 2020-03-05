@@ -25,6 +25,7 @@ class RestaurantGuide extends React.Component{
       boxShadow: "15px 20px #888888"
     }
   return(
+    <div>
     <div style={btnCSS}>
     <div>
     <p> Top Ten Criminally Underrated </p>
@@ -39,6 +40,14 @@ class RestaurantGuide extends React.Component{
     <p> Pod Wars: Diamonds in the Rough</p>
     <input type="image" id="myimage" alt="food cart" style={{height:"300px", width:"300px"}} src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTTIUoH_y-3_MD_dL-FPeZG_VLCgDz9VeSdKcMNgfv93rOgMbmC" />
     </div>
+    </div>
+    <h3 style={{textAlign: "center"}}>Revisit our past articles below</h3>
+      <ul>
+        <li><a href="KoreanFood.jsx">Move Over Beaverton: Where to find top Korean Food right in PDX</a></li>
+        <li><a href="KoreanFood.jsx">Move Over Beaverton: Where to find top Korean Food right in PDX</a></li>
+        <li><a href="KoreanFood.jsx">Move Over Beaverton: Where to find top Korean Food right in PDX</a></li>
+        <li><a href="KoreanFood.jsx">Move Over Beaverton: Where to find top Korean Food right in PDX</a></li>
+      </ul>
     </div>
     )
 
