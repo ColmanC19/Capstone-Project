@@ -1,8 +1,10 @@
 class CreateEstablishments < ActiveRecord::Migration[6.0]
   def change
     create_table :establishments do |t|
-      t.string :name
-      t.string :review
+      t.string :title
+      t.text :review
+
+      t.timestamps
     end
   end
 end
