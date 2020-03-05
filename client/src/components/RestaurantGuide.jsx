@@ -13,7 +13,7 @@ function RestaurantGuide(){
   }
   return(
     <div style={guideCSS}>
-    <h2>Top Ten Group Hangout Spots</h2>
+    <h2>Top Ten Group Hangout Spots| </h2>
     <h2>Top Ten Take-Out Spots</h2>
     </div>
     )
