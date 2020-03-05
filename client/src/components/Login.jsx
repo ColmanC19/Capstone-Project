@@ -17,7 +17,9 @@ export default function Login(props) {
     maxWidth: "120px",
     marginLeft: "auto",
     border: "solid",
-    borderRadius: "10px"
+    borderRadius: "10px",
+
+
 
   }
   const btnStyle = {
@@ -26,8 +28,8 @@ export default function Login(props) {
   }
 
   return (
-    <div>
-      <form style={signInCSS} onSubmit={handleSubmit}>
+    <div style={signInCSS}>
+      <form onSubmit={handleSubmit}>
         <FormGroup controlId="email">
           <ControlLabel>Email</ControlLabel>
           <FormControl style={signInCSS}

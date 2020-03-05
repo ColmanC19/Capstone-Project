@@ -19,6 +19,7 @@ class RestaurantGuide extends React.Component{
       margin: "20px",
       marginLeft: "auto",
       marginRight: "auto",
+      marginTop: "auto",
       borderRadius: "5%",
       color: "#353839",
       boxShadow: "15px 20px #888888"

@@ -8,7 +8,10 @@ const headerCSS = {
   fontSize: "70px",
   textAlign: "center",
   color: "#353839",
-  textDecoration: "underline"
+  textDecoration: "underline",
+  textShadow: "2px 3px #888888"
+
+
 }
 
 
@@ -18,7 +21,7 @@ const headerCSS = {
    <div>
    <div>
     <Link style={{color: "#353839"}} to="/homebody"> Home| </Link><Link style={{color: "#353839"}} to="/"> Back| </Link><Link style={{color: "#353839"}} to="/restaurantguide"> Restaurant Guide </Link>
-    <h1 style={headerCSS}>FeedR Pdx</h1>
+    <h1 style={headerCSS}>FdR Pdx</h1>
     <Login />
    </div>
    </div>
