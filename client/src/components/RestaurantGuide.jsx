@@ -1,20 +1,22 @@
 import React from 'react';
 
 function RestaurantGuide(){
-  const guideCSS = {
-    display: "inline-flex",
+  const btnCSS = {
+    display: "inline-block",
     border: "solid black",
     marginLeft: "auto",
     marginRight: "auto",
     marginTop: "auto",
     marginBottom: "auto",
     borderRadius: "25px",
+    color: "#353839",
     boxShadow: "15px 20px #888888"
   }
+
   return(
-    <div style={guideCSS}>
-    <h2>Top Ten Group Hangout Spots| </h2>
-    <h2>Top Ten Take-Out Spots</h2>
+    <div>
+    <button type="submit">Top Ten Group Hangout Spots| </button>
+    <button type="submit">Top Ten Take-Out Spots</button>
     </div>
     )
 }
