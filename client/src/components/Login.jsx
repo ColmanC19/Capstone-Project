@@ -12,6 +12,7 @@ export default function Login(props) {
 
   function handleSubmit(event) {
     event.preventDefault();
+    props.userHasAuthenticated(true);
   }
   const signInCSS = {
     maxWidth: "120px",

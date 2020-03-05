@@ -1,5 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.css';
-import React from 'react';
+import React, { useState } from "react";
 import './App.css';
 import Header from './components/Header.jsx';
 import HomeBody from './components/HomeBody.jsx';
@@ -8,6 +8,8 @@ import { Switch, Route } from 'react-router-dom';
 import Login from './components/Login.jsx';
 
 function App() {
+  const [isAuthenticated, userHasAuthenticated] = useState(false);
+
   return (
     <div>
     <div className="App">
