@@ -15,15 +15,15 @@ export default function Login(props) {
   }
   const signInCSS = {
     maxWidth: "120px",
-    textAlign: "auto",
     padding: "0px 0",
-    margin: "0 auto"
+    margin: "0 auto",
+
   }
 
   return (
-    <div style={signInCSS}className="Login">
+    <div style={signInCSS}>
       <form onSubmit={handleSubmit}>
-        <FormGroup controlId="email" bsSize="large">
+        <FormGroup controlId="email">
           <ControlLabel>Email</ControlLabel>
           <FormControl
             autoFocus
@@ -32,7 +32,7 @@ export default function Login(props) {
             onChange={e => setEmail(e.target.value)}
           />
         </FormGroup>
-        <FormGroup controlId="password" bsSize="large">
+        <FormGroup controlId="password">
           <ControlLabel>Password</ControlLabel>
           <FormControl
             value={password}
@@ -40,7 +40,7 @@ export default function Login(props) {
             type="password"
           />
         </FormGroup>
-        <Button block bsSize="large" disabled={!validateForm()} type="submit">
+        <Button disabled={!validateForm()} type="submit">
           Login
         </Button>
       </form>
