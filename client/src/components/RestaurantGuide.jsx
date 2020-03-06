@@ -11,6 +11,7 @@ class RestaurantGuide extends React.Component{
       redirecttipping: false,
       redirectpod: false,
       redirectrez: false,
+      redirectunderrated: false,
       error: null,
       isLoaded: false,
     };
@@ -62,6 +63,18 @@ class RestaurantGuide extends React.Component{
       return <Redirect to='/Rez' />
     }
   }
+  // Underrated--------------------------------------------
+  setRedirectUnderrated = () => {
+    this.setState({
+      redirectunderrated: true
+    })
+  }
+
+  renderRedirectUnderrated = () => {
+    if (this.state.redirectunderrated) {
+      return <Redirect to='/Underrated' />
+    }
+  }
 
 
 
@@ -80,28 +93,31 @@ class RestaurantGuide extends React.Component{
     <div>
     <div style={btnCSS}>
     <div>
-    <p> Top Ten Criminally Underrated </p>
-    <input type="image" id="myimage" alt="plated food" style={{height:"300px", width:"300px"}} src="https://cdn.vox-cdn.com/thumbor/E2tiOjzPxWR282Mu_kREU9gYvTs=/0x0:2700x1800/1820x1213/filters:focal(1134x684:1566x1116):format(webp)/cdn.vox-cdn.com/uploads/chorus_image/image/66406185/JannieHuang_3775.0.jpg" />
+    {this.renderRedirectUnderrated()}
+      <button style={{backgroundColor: "#8BA8B7", border: "#8BA8B7"}} onClick={this.setRedirectUnderrated}>Top Ten Criminally Underrated</button>
+    <img id="myimage" alt="plated food" style={{height:"300px", width:"300px"}} src="https://cdn.vox-cdn.com/thumbor/E2tiOjzPxWR282Mu_kREU9gYvTs=/0x0:2700x1800/1820x1213/filters:focal(1134x684:1566x1116):format(webp)/cdn.vox-cdn.com/uploads/chorus_image/image/66406185/JannieHuang_3775.0.jpg" />
     </div>
 
     <div>
     {this.renderRedirectRez()}
-      <button onClick={this.setRedirectRez}>No Reservation? No Problem</button>
-    <input type="image" id="myimage" alt="friends" style={{height:"300px", width:"300px"}} src="https://cdn.vox-cdn.com/thumbor/qsE6ss2yoVMDzl9um9VMtgOIHkg=/0x210:960x750/500x281/filters:format(webp)/cdn.vox-cdn.com/uploads/chorus_image/image/66294489/Bao_Bao_pdx.0.jpg" />
+      <button style={{backgroundColor: "#8BA8B7", border: "#8BA8B7"}} onClick={this.setRedirectRez}>No Reservation? No Problem</button>
+    <img id="myimage" alt="friends" style={{height:"300px", width:"300px"}} src="https://cdn.vox-cdn.com/thumbor/qsE6ss2yoVMDzl9um9VMtgOIHkg=/0x210:960x750/500x281/filters:format(webp)/cdn.vox-cdn.com/uploads/chorus_image/image/66294489/Bao_Bao_pdx.0.jpg" />
     </div>
     <div>
     {this.renderRedirectPod()}
-      <button onClick={this.setRedirectPod}>Pod Wars: Diamonds in the Rough</button>
-    <input type="image" id="myimage" alt="food cart" style={{height:"300px", width:"300px"}} src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTTIUoH_y-3_MD_dL-FPeZG_VLCgDz9VeSdKcMNgfv93rOgMbmC" />
+      <button style={{backgroundColor: "#8BA8B7", border: "#8BA8B7"}} onClick={this.setRedirectPod}>Pod Wars: Diamonds in the Rough</button>
+    <img id="myimage" alt="food cart" style={{height:"300px", width:"300px"}} src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTTIUoH_y-3_MD_dL-FPeZG_VLCgDz9VeSdKcMNgfv93rOgMbmC" />
     </div>
     </div>
     <h3 style={{padding: "20px", textAlign: "center"}}>Revisit our past articles below</h3>
-
+    <div>
     {this.renderRedirect()}
-      <button onClick={this.setRedirect}>Move Over Beaverton: Where to find top Korean Food right in PDX</button>
+      <button style={{backgroundColor: "#8BA8B7", border: "#8BA8B7"}} onClick={this.setRedirect}>Move Over Beaverton: Where to find top Korean Food right in PDX By: Colman Currie</button>
+      </div>
+      <div>
     {this.renderRedirectTipping()}
-      <button onClick={this.setRedirectTipping}>Tipping: Is enough, enough?</button>
-
+      <button style={{backgroundColor: "#8BA8B7", border: "#8BA8B7"}} onClick={this.setRedirectTipping}>Tipping: Is enough, enough? By: Colman Currie</button>
+      </div>
 
     <div style={{border: "solid", textAlign:"center", boxShadow: "15px 20px #888888", marginLeft:"auto", marginRight: "auto", borderRadius: "5%", display: "block"}}>
     <h1> THE FEED HEAT</h1>

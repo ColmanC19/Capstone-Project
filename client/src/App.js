@@ -7,6 +7,7 @@ import KoreanFood from './components/KoreanFood.jsx';
 import Tipping from './components/Tipping.jsx';
 import PodCart from './components/PodCart.jsx';
 import Rez from './components/Rez.jsx';
+import Underrated from './components/Underrated.jsx';
 import RestaurantGuide from './components/RestaurantGuide.jsx';
 import { Switch, Route } from 'react-router-dom';
 import Login from './components/Login.jsx';
@@ -23,6 +24,7 @@ function App() {
     <Route path='/koreanFood' component={KoreanFood} />
     <Route path='/tipping' component={Tipping} />
     <Route path='/rez' component={Rez} />
+    <Route path='/underrated' component={Underrated} />
     <Route path='/podcart' component={PodCart} />
     <Route exact path='/' component={HomeBody} />
     <Route path='/restaurantguide' component={RestaurantGuide} />
