@@ -4,7 +4,7 @@ function Tipping(){
 
   return(
     <div>
-    <h1>$$$$$$$$$$$$$$$$$$$$</h1>
+    <h1>MONEY MONEY MONEY MONEY MONEY</h1>
 
 
     </div>

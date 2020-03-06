@@ -8,6 +8,8 @@ class RestaurantGuide extends React.Component{
     super(props);
     this.state = {
       redirect: false,
+      redirecttipping: false,
+      redirectpod: false,
       error: null,
       isLoaded: false,
     };
@@ -18,10 +20,33 @@ class RestaurantGuide extends React.Component{
       redirect: true
     })
   }
-
   renderRedirect = () => {
     if (this.state.redirect) {
       return <Redirect to='/KoreanFood' />
+    }
+  }
+  // Tipping-----------------------------------------------
+  setRedirectTipping = () => {
+    this.setState({
+      redirecttipping: true
+    })
+  }
+
+  renderRedirectTipping = () => {
+    if (this.state.redirecttipping) {
+      return <Redirect to='/Tipping' />
+    }
+  }
+  // POD--------------------------------------------
+  setRedirectPod = () => {
+    this.setState({
+      redirectpod: true
+    })
+  }
+
+  renderRedirectPod = () => {
+    if (this.state.redirectpod) {
+      return <Redirect to='/PodCart' />
     }
   }
 
@@ -51,7 +76,8 @@ class RestaurantGuide extends React.Component{
     <input type="image" id="myimage" alt="friends" style={{height:"300px", width:"300px"}} src="https://cdn.vox-cdn.com/thumbor/qsE6ss2yoVMDzl9um9VMtgOIHkg=/0x210:960x750/500x281/filters:format(webp)/cdn.vox-cdn.com/uploads/chorus_image/image/66294489/Bao_Bao_pdx.0.jpg" />
     </div>
     <div>
-    <p> Pod Wars: Diamonds in the Rough</p>
+    {this.renderRedirectPod()}
+      <button onClick={this.setRedirectPod}>Pod Wars: Diamonds in the Rough</button>
     <input type="image" id="myimage" alt="food cart" style={{height:"300px", width:"300px"}} src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTTIUoH_y-3_MD_dL-FPeZG_VLCgDz9VeSdKcMNgfv93rOgMbmC" />
     </div>
     </div>
@@ -59,8 +85,8 @@ class RestaurantGuide extends React.Component{
 
     {this.renderRedirect()}
       <button onClick={this.setRedirect}>Move Over Beaverton: Where to find top Korean Food right in PDX</button>
-    {this.renderRedirect()}
-      <button onClick={this.setRedirect}>Tipping: Is enough, enough?</button>
+    {this.renderRedirectTipping()}
+      <button onClick={this.setRedirectTipping}>Tipping: Is enough, enough?</button>
 
 
     <div style={{border: "solid", textAlign:"center", boxShadow: "15px 20px #888888", marginLeft:"auto", marginRight: "auto", borderRadius: "5%", display: "block"}}>
