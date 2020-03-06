@@ -12,6 +12,7 @@ class RestaurantGuide extends React.Component{
       redirectpod: false,
       redirectrez: false,
       redirectunderrated: false,
+      redirectfeedr: false,
       error: null,
       isLoaded: false,
     };
@@ -75,6 +76,18 @@ class RestaurantGuide extends React.Component{
       return <Redirect to='/Underrated' />
     }
   }
+  // FdR Heat Map--------------------------------------------
+  setRedirectFeedr = () => {
+    this.setState({
+      redirectfeedr: true
+    })
+  }
+
+  renderRedirectFeedr = () => {
+    if (this.state.redirectfeedr) {
+      return <Redirect to='/FeedHeat' />
+    }
+  }
 
 
 
@@ -87,7 +100,7 @@ class RestaurantGuide extends React.Component{
       marginRight: "auto",
       marginTop: "auto",
       color: "#353839",
-      boxShadow: "15px 20px #888888"
+      // boxShadow: "15px 20px #888888"
     }
   return(
     <div>
@@ -112,16 +125,20 @@ class RestaurantGuide extends React.Component{
     <h3 style={{padding: "20px", textAlign: "center"}}>Revisit our past articles below</h3>
     <div>
     {this.renderRedirect()}
-      <button style={{backgroundColor: "#8BA8B7", border: "#8BA8B7"}} onClick={this.setRedirect}>Move Over Beaverton: Where to find top Korean Food right in PDX By: Colman Currie</button>
+      <button style={{backgroundColor: "#8BA8B7", border: "#8BA8B7"}} onClick={this.setRedirect}><strong>Move Over Beaverton: Where to find top Korean Food right in PDX</strong> By: Colman Currie</button>
       </div>
       <div>
     {this.renderRedirectTipping()}
-      <button style={{backgroundColor: "#8BA8B7", border: "#8BA8B7"}} onClick={this.setRedirectTipping}>Tipping: Is enough, enough? By: Colman Currie</button>
+      <button style={{backgroundColor: "#8BA8B7", border: "#8BA8B7"}} onClick={this.setRedirectTipping}><strong>Tipping: Is enough, enough?</strong> By: Colman Currie</button>
       </div>
 
-    <div style={{border: "solid", textAlign:"center", boxShadow: "15px 20px #888888", marginLeft:"auto", marginRight: "auto", borderRadius: "5%", display: "block"}}>
-    <h1> THE FEED HEAT</h1>
-    <p> Find out about all the places that fly under the radar now!</p>
+    <div style={{textAlign:"center", boxShadow: "15px 20px #888888", marginLeft:"auto", marginRight: "auto", borderRadius: "5%", display: "block"}}>
+    <div>
+  {this.renderRedirectFeedr()}
+    <button style={{backgroundColor: "#8BA8B7", border: "#8BA8B7"}} onClick={this.setRedirectFeedr}><h1> THE FEED HEAT</h1>
+     Find out about all the places that fly under the radar now!
+    </button>
+    </div>
     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTLmPoDQxV5N-XhqEk0aT5XY3m_cIRD0XW467tcbBAfVPODLwAF" alt="flames"/>
 
     </div>
