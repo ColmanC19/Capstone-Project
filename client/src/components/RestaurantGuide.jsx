@@ -1,13 +1,32 @@
 import React from 'react';
+import { Redirect } from 'react-router-dom'
+
 
 
 class RestaurantGuide extends React.Component{
   constructor(props){
     super(props);
     this.state = {
+      redirect: false,
       error: null,
       isLoaded: false,
     };
+  }
+
+  setRedirect = () => {
+    this.setState({
+      redirect: true
+    })
+  }
+  renderRedirectKoreanFood = () => {
+    if (this.state.redirect) {
+      return <Redirect to='/KoreanFood' />
+    }
+  }
+  renderRedirectTipping = () => {
+    if (this.state.redirect) {
+      return <Redirect to='/Tipping' />
+    }
   }
 
 
@@ -40,12 +59,13 @@ class RestaurantGuide extends React.Component{
     </div>
     </div>
     <h3 style={{padding: "20px", textAlign: "center"}}>Revisit our past articles below</h3>
-      <ul>
-        <li><a href="KoreanFood.jsx">Move Over Beaverton: Where to find top Korean Food right in PDX</a></li>
-        <li><a href="KoreanFood.jsx">Move Over Beaverton: Where to find top Korean Food right in PDX</a></li>
-        <li><a href="KoreanFood.jsx">Move Over Beaverton: Where to find top Korean Food right in PDX</a></li>
-        <li><a href="KoreanFood.jsx">Move Over Beaverton: Where to find top Korean Food right in PDX</a></li>
-      </ul>
+
+    {this.renderRedirectKoreanFood()}
+      <button onClick={this.setRedirect}>Move Over Beaverton: Where to find top Korean Food right in PDX</button>
+    {this.renderRedirectTipping()}
+      <button onClick={this.setRedirect}>Tipping: Is enough, enough?</button>
+
+
     <div style={{border: "solid", textAlign:"center", boxShadow: "15px 20px #888888", marginLeft:"auto", marginRight: "auto", borderRadius: "5%", display: "block"}}>
     <h1> THE FEED HEAT</h1>
     <p> Find out about all the places that fly under the radar now!</p>
