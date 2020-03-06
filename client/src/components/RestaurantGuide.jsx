@@ -10,6 +10,7 @@ class RestaurantGuide extends React.Component{
       redirect: false,
       redirecttipping: false,
       redirectpod: false,
+      redirectrez: false,
       error: null,
       isLoaded: false,
     };
@@ -49,6 +50,18 @@ class RestaurantGuide extends React.Component{
       return <Redirect to='/PodCart' />
     }
   }
+  // REZZIES--------------------------------------------
+  setRedirectRez = () => {
+    this.setState({
+      redirectrez: true
+    })
+  }
+
+  renderRedirectRez = () => {
+    if (this.state.redirectrez) {
+      return <Redirect to='/Rez' />
+    }
+  }
 
 
 
@@ -72,7 +85,8 @@ class RestaurantGuide extends React.Component{
     </div>
 
     <div>
-    <p> No Reservation? No Problem</p>
+    {this.renderRedirectRez()}
+      <button onClick={this.setRedirectRez}>No Reservation? No Problem</button>
     <input type="image" id="myimage" alt="friends" style={{height:"300px", width:"300px"}} src="https://cdn.vox-cdn.com/thumbor/qsE6ss2yoVMDzl9um9VMtgOIHkg=/0x210:960x750/500x281/filters:format(webp)/cdn.vox-cdn.com/uploads/chorus_image/image/66294489/Bao_Bao_pdx.0.jpg" />
     </div>
     <div>
