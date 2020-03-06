@@ -14,13 +14,11 @@ class RestaurantGuide extends React.Component{
   render() {
     const btnCSS = {
       display: "inline-flex",
-      border: "solid",
       // padding: "50px",
       // margin: "20px",
       marginLeft: "auto",
       marginRight: "auto",
       marginTop: "auto",
-      borderRadius: "5%",
       color: "#353839",
       boxShadow: "15px 20px #888888"
     }
@@ -41,7 +39,7 @@ class RestaurantGuide extends React.Component{
     <input type="image" id="myimage" alt="food cart" style={{height:"300px", width:"300px"}} src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTTIUoH_y-3_MD_dL-FPeZG_VLCgDz9VeSdKcMNgfv93rOgMbmC" />
     </div>
     </div>
-    <h3 style={{textAlign: "center"}}>Revisit our past articles below</h3>
+    <h3 style={{padding: "20px", textAlign: "center"}}>Revisit our past articles below</h3>
       <ul>
         <li><a href="KoreanFood.jsx">Move Over Beaverton: Where to find top Korean Food right in PDX</a></li>
         <li><a href="KoreanFood.jsx">Move Over Beaverton: Where to find top Korean Food right in PDX</a></li>
