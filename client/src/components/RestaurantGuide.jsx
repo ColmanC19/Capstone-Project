@@ -15,8 +15,8 @@ class RestaurantGuide extends React.Component{
     const btnCSS = {
       display: "inline-flex",
       border: "solid",
-      padding: "50px",
-      margin: "20px",
+      // padding: "50px",
+      // margin: "20px",
       marginLeft: "auto",
       marginRight: "auto",
       marginTop: "auto",
@@ -48,6 +48,12 @@ class RestaurantGuide extends React.Component{
         <li><a href="KoreanFood.jsx">Move Over Beaverton: Where to find top Korean Food right in PDX</a></li>
         <li><a href="KoreanFood.jsx">Move Over Beaverton: Where to find top Korean Food right in PDX</a></li>
       </ul>
+    <div style={{border: "solid", textAlign:"center", boxShadow: "15px 20px #888888", marginLeft:"auto", marginRight: "auto", borderRadius: "5%", display: "block"}}>
+    <h1> THE FEED HEAT</h1>
+    <p> Find out about all the places that fly under the radar now!</p>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTLmPoDQxV5N-XhqEk0aT5XY3m_cIRD0XW467tcbBAfVPODLwAF" alt="flames"/>
+
+    </div>
     </div>
     )
 
