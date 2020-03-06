@@ -18,16 +18,13 @@ class RestaurantGuide extends React.Component{
       redirect: true
     })
   }
-  renderRedirectKoreanFood = () => {
+
+  renderRedirect = () => {
     if (this.state.redirect) {
       return <Redirect to='/KoreanFood' />
     }
   }
-  renderRedirectTipping = () => {
-    if (this.state.redirect) {
-      return <Redirect to='/Tipping' />
-    }
-  }
+
 
 
   render() {
@@ -60,9 +57,9 @@ class RestaurantGuide extends React.Component{
     </div>
     <h3 style={{padding: "20px", textAlign: "center"}}>Revisit our past articles below</h3>
 
-    {this.renderRedirectKoreanFood()}
+    {this.renderRedirect()}
       <button onClick={this.setRedirect}>Move Over Beaverton: Where to find top Korean Food right in PDX</button>
-    {this.renderRedirectTipping()}
+    {this.renderRedirect()}
       <button onClick={this.setRedirect}>Tipping: Is enough, enough?</button>
 
 
