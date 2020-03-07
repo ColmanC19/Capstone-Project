@@ -18,7 +18,7 @@ class Underrated extends React.Component {
         (result) => {
           this.setState({
             isLoaded: true,
-            food: result.news[0].title
+            food: result.news[0].description
           });
         },
         // Note: it's important to handle errors here
@@ -43,9 +43,11 @@ class Underrated extends React.Component {
        return <div>Loading...</div>;
      } else {
        return (
+         <div>
          <ul>
           <h1> {this.state.food} </h1>
          </ul>
+         </div>
        );
      }
    }
