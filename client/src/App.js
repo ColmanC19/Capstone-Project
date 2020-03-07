@@ -1,4 +1,3 @@
-import 'bootstrap/dist/css/bootstrap.css';
 import React, { useState } from "react";
 import './App.css';
 import Header from './components/Header.jsx';
@@ -12,6 +11,7 @@ import FeedHeat from './components/FeedHeat.jsx';
 import RestaurantGuide from './components/RestaurantGuide.jsx';
 import { Switch, Route } from 'react-router-dom';
 import Login from './components/Login.jsx';
+
 
 function App() {
   const [isAuthenticated, userHasAuthenticated] = useState(false);

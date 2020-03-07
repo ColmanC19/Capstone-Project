@@ -9,7 +9,7 @@ const headerCSS = {
   textAlign: "center",
   color: "#353839",
   textDecoration: "underline",
-  textShadow: "2px 3px #888888"
+
 
 
 }
@@ -18,13 +18,15 @@ const headerCSS = {
  return (
 
 
-   <div>
+
    <div>
     <Link style={{color: "#353839"}} to="/homebody"> Home| </Link><Link style={{color: "#353839"}} to="/"> Back| </Link><Link style={{color: "#353839"}} to="/restaurantguide"> Restaurant Guide </Link>
     <h1 style={headerCSS}>FdR Pdx</h1>
     <Login />
-   </div>
-   </div>
+    </div>
+
+
+
 
 
  );

@@ -1,5 +1,6 @@
-import React from 'react';
-import { Redirect } from 'react-router-dom'
+import React, { Component } from 'react';
+import { Redirect } from 'react-router-dom';
+import { Grid } from 'react-bootstrap';
 
 
 
@@ -104,6 +105,7 @@ class RestaurantGuide extends React.Component{
     }
   return(
     <div>
+    <Grid>
     <div style={btnCSS}>
     <div>
     {this.renderRedirectUnderrated()}
@@ -142,6 +144,7 @@ class RestaurantGuide extends React.Component{
     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTLmPoDQxV5N-XhqEk0aT5XY3m_cIRD0XW467tcbBAfVPODLwAF" alt="flames"/>
 
     </div>
+    </Grid>
     </div>
     )
 
