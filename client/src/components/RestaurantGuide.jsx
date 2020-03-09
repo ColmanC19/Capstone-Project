@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
 import { Grid } from 'react-bootstrap';
+import './Underrated.css';
 
 
 
@@ -101,7 +102,13 @@ class RestaurantGuide extends React.Component{
       marginRight: "auto",
       marginTop: "auto",
       color: "#353839",
-      // boxShadow: "15px 20px #888888"
+      textAlign: "center",
+      boxShadow: "5px 10px #888888",
+      marginLeft:"auto",
+      marginRight: "auto",
+      borderRadius: "5%",
+
+
     }
   return(
     <div>
@@ -127,21 +134,20 @@ class RestaurantGuide extends React.Component{
     <h3 style={{padding: "20px", textAlign: "center"}}>Revisit our past articles below</h3>
     <div>
     {this.renderRedirect()}
-      <button style={{backgroundColor: "#8BA8B7", border: "#8BA8B7"}} onClick={this.setRedirect}><strong>Move Over Beaverton: Where to find top Korean Food right in PDX</strong> By: Colman Currie</button>
+      <button style={{border: "#8BA8B7"}} onClick={this.setRedirect}><strong>Move Over Beaverton: Where to find top Korean Food right in PDX</strong> By: Colman Currie</button>
       </div>
       <div>
     {this.renderRedirectTipping()}
-      <button style={{backgroundColor: "#8BA8B7", border: "#8BA8B7"}} onClick={this.setRedirectTipping}><strong>Tipping: Is enough, enough?</strong> By: Colman Currie</button>
+      <button style={{border: "#8BA8B7"}} onClick={this.setRedirectTipping}><strong>Tipping: Is enough, enough?</strong> By: Colman Currie</button>
       </div>
 
     <div style={{textAlign:"center", boxShadow: "15px 20px #888888", marginLeft:"auto", marginRight: "auto", borderRadius: "5%", display: "block"}}>
     <div>
   {this.renderRedirectFeedr()}
-    <button style={{backgroundColor: "#8BA8B7", border: "#8BA8B7"}} onClick={this.setRedirectFeedr}><h1> THE FEED HEAT</h1>
-     Find out about all the places that fly under the radar now!
+    <button style={{color:"white", backgroundImage: "url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTLmPoDQxV5N-XhqEk0aT5XY3m_cIRD0XW467tcbBAfVPODLwAF)"}} onClick={this.setRedirectFeedr}><h1 style={{fontWeight:"bold"}}> THE FEED HEAT</h1>
+     <h3 style={{fontWeight:"bolder"}}>Find out about all the places that fly under the radar now!</h3>
     </button>
     </div>
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTLmPoDQxV5N-XhqEk0aT5XY3m_cIRD0XW467tcbBAfVPODLwAF" alt="flames"/>
 
     </div>
     </Grid>
