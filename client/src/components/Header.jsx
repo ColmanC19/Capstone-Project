@@ -20,7 +20,7 @@ const headerCSS = {
 
 
    <div>
-    <Link style={{color: "#353839"}} to="/homebody"> Home| </Link><Link style={{color: "#353839"}} to="/"> Back| </Link><Link style={{color: "#353839"}} to="/restaurantguide"> Restaurant Guide </Link>
+    <Link style={{color: "#353839"}} to="/homebody"> Home| </Link><Link style={{color: "#353839"}} to="/restaurantguide"> Restaurant Guide </Link>
     <h1 style={headerCSS}>FdR Pdx</h1>
     <Login />
     </div>
