@@ -100,7 +100,7 @@ class RestaurantGuide extends React.Component{
       // margin: "20px",
       marginLeft: "auto",
       marginRight: "auto",
-      marginTop: "auto",
+      marginTop: "100px",
       color: "#353839",
       textAlign: "center",
       boxShadow: "5px 10px #888888",
@@ -113,6 +113,16 @@ class RestaurantGuide extends React.Component{
   return(
     <div>
     <Grid>
+    <div style={{textAlign:"center", boxShadow: "15px 20px #888888", marginLeft:"auto", marginRight: "auto", borderRadius: "5%", display: "block"}}>
+    <div>
+  {this.renderRedirectFeedr()}
+    <button style={{color:"white", backgroundImage: "url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTLmPoDQxV5N-XhqEk0aT5XY3m_cIRD0XW467tcbBAfVPODLwAF)"}} onClick={this.setRedirectFeedr}><h1 style={{fontWeight:"bold"}}> THE FEED HEAT</h1>
+     <h3 style={{fontWeight:"bolder"}}>Find out about all the places that fly under the radar now!</h3>
+    </button>
+    </div>
+
+    </div>
+
     <div style={btnCSS}>
     <div>
     {this.renderRedirectUnderrated()}
@@ -141,15 +151,7 @@ class RestaurantGuide extends React.Component{
       <button style={{border: "#8BA8B7"}} onClick={this.setRedirectTipping}><strong>Tipping: Is enough, enough?</strong> By: Colman Currie</button>
       </div>
 
-    <div style={{textAlign:"center", boxShadow: "15px 20px #888888", marginLeft:"auto", marginRight: "auto", borderRadius: "5%", display: "block"}}>
-    <div>
-  {this.renderRedirectFeedr()}
-    <button style={{color:"white", backgroundImage: "url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTLmPoDQxV5N-XhqEk0aT5XY3m_cIRD0XW467tcbBAfVPODLwAF)"}} onClick={this.setRedirectFeedr}><h1 style={{fontWeight:"bold"}}> THE FEED HEAT</h1>
-     <h3 style={{fontWeight:"bolder"}}>Find out about all the places that fly under the radar now!</h3>
-    </button>
-    </div>
 
-    </div>
     </Grid>
     </div>
     )
