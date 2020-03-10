@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, {Component, useState } from "react";
 import './App.css';
 import Header from './components/Header.jsx';
 import HomeBody from './components/HomeBody.jsx';
@@ -13,28 +13,40 @@ import { Switch, Route } from 'react-router-dom';
 import Login from './components/Login.jsx';
 
 
-function App() {
-  const [isAuthenticated, userHasAuthenticated] = useState(false);
 
-  return (
-    <div>
-    <div className="App">
-    < Header />
-    <Switch>
-    <Route path='/homeBody' component={HomeBody} />
-    <Route path='/koreanFood' component={KoreanFood} />
-    <Route path='/tipping' component={Tipping} />
-    <Route path='/rez' component={Rez} />
-    <Route path='/feedheat' component={FeedHeat} />
-    <Route path='/underrated' component={Underrated} />
-    <Route path='/podcart' component={PodCart} />
-    <Route exact path='/' component={HomeBody} />
-    <Route path='/restaurantguide' component={RestaurantGuide} />
-    <Route path="/login"  component={Login} />
-    </Switch>
-    </div>
-    </div>
-  );
+class App extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+
+    };
+
+
+  }
+
+
+
+  render() {
+     return (
+        <div>
+        <div className="App">
+        < Header />
+        <Switch>
+        <Route path='/homeBody' component={HomeBody} />
+        <Route path='/koreanFood' component={KoreanFood} />
+        <Route path='/tipping' component={Tipping} />
+        <Route path='/rez' component={Rez} />
+        <Route path='/feedheat' component={FeedHeat} />
+        <Route path='/underrated' component={Underrated} />
+        <Route path='/podcart' component={PodCart} />
+        <Route exact path='/' component={HomeBody} />
+        <Route path='/restaurantguide' component={RestaurantGuide} />
+        <Route path="/login"  component={Login} />
+        </Switch>
+        </div>
+        </div>
+      );
+    }
 }
-
 export default App;
