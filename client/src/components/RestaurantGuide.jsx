@@ -113,7 +113,7 @@ class RestaurantGuide extends React.Component{
   return(
     <div>
     <Grid>
-    <div style={{textAlign:"center", boxShadow: "15px 20px #888888", marginLeft:"auto", marginRight: "auto", borderRadius: "5%", display: "block"}}>
+    <div style={{textAlign:"center", marginLeft:"auto", marginRight: "auto", borderRadius: "5%", display: "block"}}>
     <div>
   {this.renderRedirectFeedr()}
     <button style={{color:"white", backgroundImage: "url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTLmPoDQxV5N-XhqEk0aT5XY3m_cIRD0XW467tcbBAfVPODLwAF)"}} onClick={this.setRedirectFeedr}><h1 style={{fontWeight:"bold"}}> THE FEED HEAT</h1>
