@@ -11,7 +11,7 @@
     "express-favicon": "^2.0.1",
     "path": "^0.12.7"
   },
-  "devDependencies": {},
+  "Dependencies": {},
   "scripts": {
       "build": "cd client && yarn install && yarn build && cd ..",
       "deploy": "cp -a client/build/. public/",
