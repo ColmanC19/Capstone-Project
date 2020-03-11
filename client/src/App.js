@@ -10,7 +10,7 @@ import Rez from './components/Rez.jsx';
 import Underrated from './components/Underrated.jsx';
 import FeedHeat from './components/FeedHeat.jsx';
 import RestaurantGuide from './components/RestaurantGuide.jsx';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
 import Login from './components/registrations/Login'
 import Signup from './components/registrations/Signup'
 import Home from './components/Home.jsx';
@@ -62,7 +62,6 @@ class App extends Component {
         <div>
         <div className="App">
           < Header />
-            <BrowserRouter>
               <Switch>
               <Route path='/homeBody' component={HomeBody} />
               <Route path='/koreanFood' component={KoreanFood} />
@@ -71,26 +70,28 @@ class App extends Component {
               <Route path='/feedheat' component={FeedHeat} />
               <Route path='/underrated' component={Underrated} />
               <Route path='/podcart' component={PodCart} />
-              <Route exact path='/homebody' component={HomeBody} />
+              <Route exact path='/' component={HomeBody} />
               <Route path='/restaurantguide' component={RestaurantGuide} />
-              <Route path='/' render={props => (<Home {...props} handleLogout={this.handleLogout} loggedInStatus={this.state.isLoggedIn}/>
-              )}
-            />
-            <Route
-              path='/login'
-              render={props => (
-              <Login {...props} handleLogin={this.handleLogin} loggedInStatus={this.state.isLoggedIn}/>
-              )}
-            />
-            <Route
-               path='/signup'
-              render={props => (
-              <Signup {...props} handleLogin={this.handleLogin} loggedInStatus={this.state.isLoggedIn}/>
-              )}
-            />
-              </Switch>
-            </BrowserRouter>
-        </div>
+              <Route
+                  exact path='/'
+                  render={props => (
+                  <Home {...props} handleLogout={this.handleLogout} loggedInStatus={this.state.isLoggedIn}/>
+                  )}
+                />
+                <Route
+                   exact path='/login'
+                  render={props => (
+                  <Login {...props} handleLogin={this.handleLogin} loggedInStatus={this.state.isLoggedIn}/>
+                  )}
+                />
+                <Route
+                   exact path='/signup'
+                  render={props => (
+                  <Signup {...props} handleLogin={this.handleLogin} loggedInStatus={this.state.isLoggedIn}/>
+                  )}
+                  />
+            </Switch>
+          </div>
         </div>
       );
     }
