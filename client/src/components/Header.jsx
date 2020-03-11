@@ -9,6 +9,7 @@ const headerCSS = {
   textAlign: "center",
   color: "#353839",
   textDecoration: "underline",
+  maxHeight: "125px"
 
 
 
@@ -19,7 +20,7 @@ const headerCSS = {
 
 
 
-   <div>
+   <div style={{maxHeight: "125px"}}>
     <Link style={{color: "#353839"}} to="/homebody"> Home| </Link><Link style={{color: "#353839"}} to="/restaurantguide"> Restaurant Guide </Link>
     <h1 style={headerCSS}>FdR Pdx</h1>
     <Login />
