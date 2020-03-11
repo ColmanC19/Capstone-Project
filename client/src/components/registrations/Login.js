@@ -44,7 +44,7 @@ let user = {
     .catch(error => console.log('api errors:', error))
   };
 redirect = () => {
-    this.props.history.push('/homebody')
+    this.props.history.push('/')
   }
 handleErrors = () => {
     return (

@@ -43,7 +43,7 @@ axios.post('http://localhost:3001/users', {user}, {withCredentials: true})
     .catch(error => console.log('api errors:', error))
   };
 redirect = () => {
-    this.props.history.push('/homebody')
+    this.props.history.push('/')
   }
 handleErrors = () => {
     return (
