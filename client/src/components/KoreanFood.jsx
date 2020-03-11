@@ -1,9 +1,10 @@
 import React from 'react';
+import './KoreanFood.css';
 
 function KoreanFood(){
 
   return(
-    <div>
+    <div className="kfood">
     <h1>K-POP</h1>
 
 
