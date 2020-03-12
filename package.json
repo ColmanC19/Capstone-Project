@@ -15,7 +15,7 @@
   "scripts": {
       "build": "cd client && yarn install && yarn build && cd ..",
       "deploy": "cp -a client/build/. public/",
-      "postinstall": "yarn build && yarn deploy && echo 'Client built!'"
+      "postinstall": "npm build && npm deploy && echo 'Client built!'"
   },
   "engines": {
     "npm": "6.12.0",
