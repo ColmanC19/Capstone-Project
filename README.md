@@ -1,8 +1,19 @@
 # _Capstone Project for Epicodus Bootcamp_
 
-#### _This app is a restaurant guide for the "diamonds in the rough" in Portland._
-
 #### By _Colman Currie 3/12/20_
+
+#### _This app is a restaurant guide for the "diamonds in the rough" in Portland._
+```
+Users can view a list of articles which include: best food carts, most underrated restaurants and where to go if you don't have a reservation. There is also a list of archived articles about Korean food in Portland and tipping etiquette. There is also a "heat map" users can click on to show the hottest not-widely-known restaurants in town. Users will also be able to sign in/sign up.
+```
+#### _Stretch Goals_
+```
+I will continue working on this project and here are the goals I would like to reach by the time I show it off at demo day:
+1) All articles are fully written/styled
+2) Users can sign in to comment on articles
+3) Deployed to Heroku
+```
+
 
 
 * Clone this repository to your local machine and run the following commands:

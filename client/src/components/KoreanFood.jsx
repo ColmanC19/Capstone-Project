@@ -5,7 +5,7 @@ function KoreanFood(){
 
   return(
     <div className="kfood">
-    <h1>K-POP</h1>
+    <h1>Placeholder Text</h1>
 
 
     </div>
