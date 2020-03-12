@@ -16,7 +16,6 @@
       "build": "cd client && yarn install && yarn build && cd ..",
       "deploy": "cp -a client/build/. public/",
       "postinstall": "yarn build && yarn deploy && echo 'Client built!'"
-      "test": "echo \"Error: no test specified\" && exit 1"
   },
   "engines": {
     "npm": "6.12.0",
