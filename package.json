@@ -13,11 +13,12 @@
   },
   "Dependencies": {},
   "scripts": {
-    "start": "rails s",
-    "build": "cd client && npm install && npm run build && cd ..",
-    "deploy": "cp -a client/build/. public/",
-    "postinstall": "npm run start && npm run deploy && echo 'Client built!'"
-  },
+     "start": "react-scripts start",
+     "test": "echo \"Error: no test specified\" && exit 1",
+     "build": "cd client && npm install && npm run build && cd ..",
+     "deploy": "cp -a client/build/. public/",
+     "postinstall": "npm run build && npm run deploy && echo 'Client built!'"
+   },
   "engines": {
     "npm": "6.12.0",
     "node": "12.13.0"
