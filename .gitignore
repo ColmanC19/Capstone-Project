@@ -22,5 +22,6 @@
 /config/master.key
 
 .ENV
+# Production
 /public
 node_modules
