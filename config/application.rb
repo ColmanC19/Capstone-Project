@@ -19,11 +19,16 @@ require "action_cable/engine"
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
-module CapstoneProject
-  class Application < Rails::Application
-    # Initialize configuration defaults for originally generated Rails version.
-    config.load_defaults 5.2
-
+  module CapstoneProject
+    class Application < Rails::Application
+      # Initialize configuration defaults for originally generated Rails version.
+      # config.load_defaults 5.2
+      config.middleware.insert_before 0, Rack::Cors do
+        allow do
+          origins 'http://localhost:3000', 'https://git.heroku.com/capston-project-by-colman.git' #replace this url with that of your own heroku client app
+        resource '*', :headers => :any, :methods => [:get]
+    end
+  end
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration can go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded after loading

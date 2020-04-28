@@ -17,7 +17,7 @@ class Underrated extends React.Component {
   }
 
   componentDidMount() {
-      fetch('https://api.currentsapi.services/v1/latest-news?apiKey=ILOrXZ77NUMCwgnFltIXJbJ9GJ9XkS0HjzF-sreBrWOFD6kT&language=en')
+      fetch(`https://api.currentsapi.services/v1/latest-news?apiKey=${process.env.REACT_APP_API_KEY}&language=en&category=food`)
       .then(res => res.json())
       .then(
         (result) => {
