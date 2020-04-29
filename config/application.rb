@@ -25,7 +25,7 @@ Bundler.require(*Rails.groups)
       # config.load_defaults 5.2
       config.middleware.insert_before 0, Rack::Cors do
         allow do
-          origins 'http://localhost:3000', 'https://git.heroku.com/capston-project-by-colman.git' #replace this url with that of your own heroku client app
+          origins 'http://localhost:3000' #replace this url with that of your own heroku client app 'http://localhost:3000',
         resource '*', :headers => :any, :methods => [:get]
     end
   end
