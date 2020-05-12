@@ -16,7 +16,7 @@ import Signup from './components/registrations/Signup'
 import Home from './components/Home.jsx';
 
 
-console.log(process.env.REACT_APP_API_KEY);
+
 
 class App extends Component {
   constructor(props) {
@@ -57,7 +57,6 @@ class App extends Component {
         user: {}
         })
       }
-
 
   render() {
      return (
